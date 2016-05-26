@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<artifactId>cluster-client-example</artifactId>
+		<groupId>de.akquinet.jbosscc</groupId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>cluster-example-client</artifactId>
+	<packaging>jar</packaging>
+
+	<name>Cluster - swing client example</name>
+
+	<dependencies>
+		<dependency>
+			<groupId>de.akquinet.jbosscc</groupId>
+			<artifactId>cluster-example-server</artifactId>
+			<type>ejb</type>
+		</dependency>
+
+		<dependency>
+			<groupId>de.akquinet.jbosscc</groupId>
+			<artifactId>cluster-example-server</artifactId>
+			<version>1.0-SNAPSHOT</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.jboss.spec.javax.ejb</groupId>
+			<artifactId>jboss-ejb-api_3.2_spec</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.swinglabs</groupId>
+			<artifactId>swingx-core</artifactId>
+			<version>1.6.2-2</version>
+		</dependency>
+
+		
+		<dependency>
+            <groupId>org.jboss.eap</groupId>
+            <artifactId>wildfly-ejb-client-bom</artifactId>
+            <version>7.0.0.GA-redhat-2</version>
+            <scope>import</scope>
+            <type>pom</type>
+        </dependency>
+		
+
+		
+	</dependencies>
+</project>

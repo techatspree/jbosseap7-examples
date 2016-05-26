@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+    <title>Dynamic proxies</title>
+</h:head>
+<h:body>
+    <h1>Dynamic proxies</h1>
+
+    <h:form>
+        <h1>Submit task</h1>
+        You can submit a task with some ID here.
+
+        <h2>Current jobs (possibly already finished)</h2>
+
+        <p>
+            <h:dataTable value="#{webController.jobs}" var="job">
+                <h:column>
+                    <f:facet name="header">
+                        Job status
+                    </f:facet>
+
+                    <h:outputText value="#{job}"/>
+                </h:column>
+            </h:dataTable>
+        </p>
+
+        <h2>Currently running tasks</h2>
+
+        <p>
+            <h:dataTable value="#{webController.tasks}" var="job">
+                <h:column>
+                    <f:facet name="header">
+                        Task status
+                    </f:facet>
+
+                    <h:outputText value="#{job}"/>
+                </h:column>
+            </h:dataTable>
+        </p>
+
+        <h2>Add/Start Job</h2>
+
+        <p>
+            ID: <h:inputText id="username"
+                             value="#{webController.jobName}"
+                             required="true"
+                             requiredMessage="A name is required."
+                             maxlength="25"/>
+        </p>
+
+        <p></p>
+
+        <p><h:commandButton id="batch" value="Submit Job" action="#{webController.submitTask}"/>
+            <h:commandButton id="start" value="Start Job" action="#{webController.startTask}"/></p>
+    </h:form>
+
+    <h2>More options</h2>
+    <ul>
+        <li>
+            <h:outputLink value="index.faces">Reload page</h:outputLink>
+        </li>
+
+        <li>
+            <h:outputLink value="/jumble/SecuredEJBServlet">Session info</h:outputLink>
+        </li>
+
+        <li>
+            <h:outputLink value="/jumble/LogoutServlet">Logout</h:outputLink>
+
+        </li>
+    </ul>
+    <p/>
+
+    <h:outputLink value="/jumble/index.faces">Start page</h:outputLink>
+
+</h:body>
+</html>
+

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE jboss-web PUBLIC
+        "-//JBoss//DTD Web Application 5.0//EN"
+        "http://www.jboss.org/j2ee/dtd/jboss-web_5_0.dtd">
+
+<jboss-web xmlns="http://www.jboss.org/schema/jbossas/jboss-web_7_2.xsd" version="7.1">
+    <context-root>/jumble</context-root>
+    <security-domain>jumble-domain</security-domain>
+    <disable-audit>true</disable-audit>
+</jboss-web>
+

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jboss-deployment-structure xmlns="urn:jboss:deployment-structure:1.2">
+    <deployment>
+        <dependencies>
+            <!--
+             javax.jms.JMSException: org.jboss.as.ejb3.component.concurrent.EJBContextHandleFactory$EJBContextHandle from [Module "org.apache.activemq.artemis:main" from local module loader @de3a06f (finder: local module finder @76b10754 (roots: /Servers/wildfly-10.0.0.Final/modules,/Servers/wildfly-10.0.0.Final/modules/system/layers/base))]
+-->
+            <module name="org.jboss.as.ejb3" export="true" />
+            <module name="com.h2database.h2" export="true" />
+        </dependencies>
+    </deployment>
+</jboss-deployment-structure>
+

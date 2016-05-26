@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+    <title>Login Form</title>
+</h:head>
+<h:body>
+    <h2>Hello, please log in:</h2>
+
+    <form name="loginForm" method="POST" action="j_security_check" enctype="application/x-www-form-urlencoded">
+        <p><strong>Please type your user name: </strong>
+            <input id="username" type="text" name="j_username" size="25"/></p>
+
+        <p><strong>Please type your password: </strong>
+            <input id="password" type="password" size="15" name="j_password"/></p>
+
+        <p>
+            <input id="ok" type="submit" value="Submit"/>
+        </p>
+    </form>
+</h:body>
+</html>
+

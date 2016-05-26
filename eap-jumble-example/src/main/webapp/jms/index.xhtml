@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+    <title>JMS</title>
+</h:head>
+<h:body>
+    <h1>JMS</h1>
+    <h2>Messages</h2>
+
+    <p>
+        <h:messages id="info"/>
+    </p>
+
+
+    <h:form>
+        <h2>Submit JMS job</h2>
+
+        <p>
+            ID: <h:inputText id="username"
+                             value="#{webController.jobName}"
+                             required="true"
+                             requiredMessage="A name is required."
+                             maxlength="25"/>
+        </p>
+
+        <p></p>
+
+        <p><h:commandButton id="batch-jms" value="JMS batch" action="#{webController.submitBatchToJms}"/></p>
+    </h:form>
+    <p/>
+
+    <h:outputLink value="/jumble/index.faces">Start page</h:outputLink>
+</h:body>
+</html>
+
